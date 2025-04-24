@@ -7,25 +7,25 @@
 
 ## Table of Contents
 
-1. [Overview](#atis-twitch-bot)  
-2. [Features](#features)  
-3. [Requirements](#requirements)  
-4. [Installation](#installation)  
+- [Overview](#atis-twitch-bot)  
+- [Features](#features)  
+- [Requirements](#requirements)  
+- [Installation](#installation)  
   - [Install dependencies](#install-dependencies)  
   - [Configure the bot](#configure-the-bot)  
   - [Run the bot](#run-the-bot)  
-5. [Logging](#logging)  
-6. [Batch file](#batch-file)  
-7. [Common issues and troubleshooting](#common-issues-and-troubleshooting)  
-8. [Contact & Support](#contact--support)  
+- [Logging](#logging)  
+- [Batch file](#batch-file)  
+- [Common issues and troubleshooting](#common-issues-and-troubleshooting)  
+- [Contact & Support](#contact--support)  
   - [Technical support](#technical-support)  
   - [Feature requests and ideas](#feature-requests-and-ideas)  
   - [Collaborations](#collaborations)  
   - [How to reach me](#how-to-reach-me)  
-9. [Support the project](#support-the-project)  
-10. [Contributing](#contributing)  
-11. [License](#license)  
-12. [Acknowledgements](#acknowledgements)
+- [Support the project](#support-the-project)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Acknowledgements](#acknowledgements)
 
 ---
 
