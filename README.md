@@ -117,9 +117,9 @@ pause
 
 | Issue                          | Solution                                                 |
 |-------------------------------|----------------------------------------------------------|
-| Failed to fetch VATSIM data              | Ensure your internet connection is stable and that VATSIM's data feed is up and running. Check the URL endpoint for validity |
-| Invalid ICAO code             | Confirm it's a real ICAO airport (e.g., `KSEA`, `EGLL`)  |
-| Script not running            | Check for syntax errors or StreamerBot action settings   |
+| **Failed to fetch VATSIM data** | Ensure your internet connection is stable and that VATSIM's data feed is up and running. Check the URL endpoint for validity |
+| **No ATIS data found for ICAO** | Verify that the ICAO codes in the `ATIS_URLS` dictionary are correct and that the ATIS data URLs are still valid. |
+| **Bot not posting to Twitch chat** | Double-check that the `CHANNEL_NAME` in `config.py` is correct, and ensure the bot has permission to post in the chat. |
 
 ---
 
