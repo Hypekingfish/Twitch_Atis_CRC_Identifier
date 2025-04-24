@@ -11,7 +11,7 @@ from logging.handlers import RotatingFileHandler
 # Initialize colorama
 init(autoreset=True)
 
-log_handler = RotatingFileHandler('ATIS-BOT.log', maxBytes=5*1024*1024, backupCount=3)  # 5MB max, 3 backups
+log_handler = RotatingFileHandler('atis.log', maxBytes=5*1024*1024, backupCount=3)  # 5MB max, 3 backups
 log_handler.setLevel(logging.INFO)
 formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 log_handler.setFormatter(formatter)
@@ -34,7 +34,7 @@ def log_and_print(message, level=''):
     :param message: The message to log and print.
     :param level: The logging level ('info', 'warning', 'error', etc.).
     """
-    timestamp = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')  # Adding timestamp
+    timestamp = datetime.now(timezone.utc).strftime('%H:%M:%S')  # Adding timestamp
     message_with_timestamp = f"[{timestamp}] {message}"
     
     if level == 'info':

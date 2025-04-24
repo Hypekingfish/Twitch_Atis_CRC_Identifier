@@ -84,6 +84,21 @@ Log messages are color-coded in the terminal:
 
 ---
 
+## Batch File
+
+- Include in the download is a batch file designed to be a one click run instead of opening python everytime! Below is the code for the batch file.
+
+```batch
+@echo off
+echo Starting ATIS Bot for CRC Identifier
+python Twitch_ATIS_BOT_CRC_IDENTIFIER.py
+echo ATIS Bot has stopped
+pause
+```
+
+---
+
+
 ## Common Issues and Troubleshooting
 
 ### 1. `Error: "Failed to fetch VATSIM data"`
