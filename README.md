@@ -152,6 +152,7 @@ If you're a streamer, developer, or part of a VATSIM event team looking for cust
 | Platform | Link |
 |----------|------|
 | **Discord** | [Hype Squad Studio](https://discord.gg/AxeJ6ryn2x) |
+| **** | []() |
 
 ---
 
