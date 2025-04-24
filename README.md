@@ -1,15 +1,29 @@
-![Python version](https://img.shields.io/badge/python-3.7%2B-blue.svg)
+![Python version](https://img.shields.io/badge/python-3.9%2B-blue.svg)
 ![GitHub commit status](https://img.shields.io/github/checks-status/Hypekingfish/Twitch_Atis_CRC_Identifier/70f5efc60cf3d16d93c76cd3dd67dd7fee289dd9)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Hypekingfish/Twitch_Atis_CRC_Identifier/total)
 ![GitHub License](https://img.shields.io/github/license/Hypekingfish/Twitch_Atis_CRC_Identifier)
 ![Version](https://img.shields.io/github/v/release/Hypekingfish/Twitch_Atis_CRC_Identifier)
 ![GitHub Stars](https://img.shields.io/github/stars/Hypekingfish/Twitch_Atis_CRC_Identifier)
 
+## Table of Contents
+- [Overview](#atis-twitch-bot)
+- [Features](#features)
+- [Requirments](#requirements)
+- [Installation](#Installation)
+- [Install Dependencies](#Install-Dependencies)
+- [Configure the Bot](#Configure-the-Bot)
+- [Developer Notes](#developer-notes)
+- [License](#license)
+- [Credits](#Credits)
+- [Final Thoughts](#final-thoughts)
 
+---
 
 # ATIS Twitch Bot
 
 This is a Twitch bot that automatically fetches and posts ATIS (Automatic Terminal Information Service) data from VATSIM controllers to a specified Twitch channel. The bot will continuously update the ATIS information for the current controller and post it to the chat.
+
+---
 
 ## Features
 
@@ -21,7 +35,7 @@ This is a Twitch bot that automatically fetches and posts ATIS (Automatic Termin
 
 ## Requirements
 
-- Python 3.7+
+- Python 3.9+
 - `aiohttp` library for asynchronous HTTP requests.
 - `twitchio` library for interacting with the Twitch API.
 - `colorama` library for colored console output.
@@ -100,9 +114,9 @@ pause
 
 
 ## Common Issues and Troubleshooting
-
-### 1. `Error: "Failed to fetch VATSIM data"`
-- **Solution**: Ensure your internet connection is stable and that VATSIM's data feed is up and running. Check the URL endpoint for validity.
+| **Problem**                         | **Solution** |
+|-------------------------------------|
+| Error: "Failed to fetch VATSIM data | Ensure your internet connection is stable and that VATSIM's data feed is up and running. Check the URL endpoint for validity |
 
 ### 2. `Error: "No ATIS data found for ICAO"`
 - **Solution**: Verify that the ICAO codes in the `ATIS_URLS` dictionary are correct and that the ATIS data URLs are still valid.
