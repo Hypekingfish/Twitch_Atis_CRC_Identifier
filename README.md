@@ -1,3 +1,6 @@
+![Python version](https://img.shields.io/badge/python-3.7%2B-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+
 
 # ATIS Twitch Bot
 
@@ -74,6 +77,21 @@ Log messages are color-coded in the terminal:
 - **Yellow**: Warning messages.
 - **Red**: Error messages.
 - **Cyan**: Debug messages.
+
+---
+
+## Common Issues and Troubleshooting
+
+### 1. `Error: "Failed to fetch VATSIM data"`
+- **Solution**: Ensure your internet connection is stable and that VATSIM's data feed is up and running. Check the URL endpoint for validity.
+
+### 2. `Error: "No ATIS data found for ICAO"`
+- **Solution**: Verify that the ICAO codes in the `ATIS_URLS` dictionary are correct and that the ATIS data URLs are still valid.
+
+### 3. Bot not posting to Twitch chat
+- **Solution**: Double-check that the `CHANNEL_NAME` in `config.py` is correct, and ensure the bot has permission to post in the chat.
+
+---
 
 ## Contributing
 
