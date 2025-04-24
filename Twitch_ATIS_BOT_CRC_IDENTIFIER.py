@@ -6,34 +6,53 @@ from config import TWITCH_TOKEN, TWITCH_CLIENT_ID, CHANNEL_NAME, CID, ATIS_URLS
 import logging
 import aiohttp
 from colorama import Fore, Style, init
+from logging.handlers import RotatingFileHandler
 
 # Initialize colorama
 init(autoreset=True)
 
-# Log to file
-logging.basicConfig(filename='ATIS-BOT.log', level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+log_handler = RotatingFileHandler('ATIS-BOT.log', maxBytes=5*1024*1024, backupCount=3)  # 5MB max, 3 backups
+log_handler.setLevel(logging.INFO)
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+log_handler.setFormatter(formatter)
+
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+logger.addHandler(log_handler)
+
+SENSITIVE_VALUES = [TWITCH_TOKEN, TWITCH_CLIENT_ID]
+
+def safe_log(msg):
+    for secret in SENSITIVE_VALUES:
+        if secret in msg:
+            msg = msg.replace(secret, "[REDACTED]")
+    log_and_print(msg)
 
 def log_and_print(message, level=''):
     """
-    Logs and prints a message simultaneously.
+    Logs and prints a message simultaneously with a timestamp.
     :param message: The message to log and print.
     :param level: The logging level ('info', 'warning', 'error', etc.).
     """
-    if level == 'info':
-        logging.info(message)
-        message = f"{Fore.GREEN}{message}{Style.RESET_ALL}"  # Colorize info messages in green
-    elif level == 'warning':
-        logging.warning(message)
-        message = f"{Fore.YELLOW}{message}{Style.RESET_ALL}"  # Colorize warning messages in yellow
-    elif level == 'error':
-        logging.error(message)
-        message = f"{Fore.RED}{message}{Style.RESET_ALL}"  # Colorize error messages in red
-    elif level == 'debug':
-        logging.debug(message)
-    else:
-        logging.log(logging.INFO, message)
+    timestamp = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')  # Adding timestamp
+    message_with_timestamp = f"[{timestamp}] {message}"
     
-    print(message)
+    if level == 'info':
+        logging.info(message_with_timestamp)
+        message_with_timestamp = f"{Fore.GREEN}{message_with_timestamp}{Style.RESET_ALL}"
+    elif level == 'warning':
+        logging.warning(message_with_timestamp)
+        message_with_timestamp = f"{Fore.YELLOW}{message_with_timestamp}{Style.RESET_ALL}"
+    elif level == 'error':
+        logging.error(message_with_timestamp)
+        message_with_timestamp = f"{Fore.RED}{message_with_timestamp}{Style.RESET_ALL}"
+    elif level == 'debug':
+        logging.debug(message_with_timestamp)
+        message_with_timestamp = f"{Fore.CYAN}{message_with_timestamp}{Style.RESET_ALL}"
+    else:
+        logging.log(logging.INFO, message_with_timestamp)
+    
+    print(message_with_timestamp)
 
 async def get_current_position_from_vatsim(cid):
     """
@@ -152,21 +171,20 @@ class ATISBot(commands.Bot):
                 else:
                     log_and_print(f"Current position {current_icao} is not in the list of ATIS URLs.", level='warning')
 
-                # Wait for the next update check (every 60 seconds)
                 await asyncio.sleep(300)
 
             except Exception as e:
                 log_and_print(f"Error in update_atis: {e}", level='error')
-                await asyncio.sleep(60)  # Wait 1 minute before retrying in case of an error
+                await asyncio.sleep(60) 
 
     async def post_atis_to_chat(self, atis_info, icao):
         try:
             channel = self.get_channel(CHANNEL_NAME)
             if channel:
                 message = f"ATIS for {icao}: {atis_info}"
-                if len(message) > 500:  # Twitch message length limit
+                if len(message) > 500:
                     log_and_print(f"ATIS message too long, truncating: {len(message)}", level='warning')
-                    message = message[:497] + "..."  # Truncate and add ellipsis
+                    message = message[:497] + "... [truncated]"
                 await channel.send(message)
                 log_and_print(f"Posted ATIS update for {icao} to chat.", level='info')
             else:
