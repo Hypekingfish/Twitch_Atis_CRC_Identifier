@@ -112,6 +112,61 @@ pause
 
 ---
 
+## Contact & Support
+
+Got questions, feedback, or just want to talk about virtual ATC and Twitch bot development? I’d love to hear from you. Whether you're trying to get the bot running, thinking up new features, or ran into something unexpected, I'm here to help.
+
+---
+
+### Technical Support
+
+Running into issues or errors? No worries — I'm just a message away. I can help with:
+
+- Installation or setup guidance  
+- Configuration troubleshooting  
+- Twitch or VATSIM API integration  
+- General Python or asynchronous programming questions related to this project
+
+Don't let bugs or confusion get in the way of your stream. Reach out anytime.
+
+---
+
+### Feature Requests and Ideas
+
+Have an idea that could improve the bot for the VATSIM or Twitch community?  
+Want to add something that makes your stream experience more interactive?
+
+I'm actively working on updates and would love to hear your suggestions.  
+Even experimental or niche ideas are welcome — that's how innovation happens.
+
+---
+
+### Collaborations
+
+If you're a streamer, developer, or part of a VATSIM event team looking for custom tools or integrations, let’s connect. I’m open to collaborations, custom versions of the bot, or helping you build unique stream utilities.
+
+---
+
+### How to Reach Me
+
+**Discord (DMs open):** Fishnbuckjr02
+**Discord Server** [Hype Squad Studio](https://discord.gg/AxeJ6ryn2x)
+**Twitch:** [Hypekingfish](https://twitch.tv/Hypekingfish)  
+
+---
+
+### Support the Project
+
+If you find this bot helpful and want to support future development:
+
+- Star this repository  
+- Report bugs or request features via GitHub Issues  
+- Share it with other controllers or streamers  
+- Contribute code via pull requests  
+- Optional donation link or coffee support (coming soon)
+
+---
+
 ## Contributing
 
 1. Fork the repository.
