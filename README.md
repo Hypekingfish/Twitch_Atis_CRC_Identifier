@@ -1,7 +1,7 @@
 ![Python version](https://img.shields.io/badge/python-3.7%2B-blue.svg)
-![Build Status](https://img.shields.io/github/workflow/status/Hypekingfish/Twitch_Atis_CRC_Identifier/CI)
-![Code Coverage](https://img.shields.io/coveralls/github/Hypekingfish/Twitch_Atis_CRC_Identifier)
-![License](https://img.shields.io/badge/license-MIT-green)
+![GitHub commit status](https://img.shields.io/github/checks-status/Hypekingfish/Twitch_Atis_CRC_Identifier/70f5efc60cf3d16d93c76cd3dd67dd7fee289dd9)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Hypekingfish/Twitch_Atis_CRC_Identifier/total)
+![GitHub License](https://img.shields.io/github/license/Hypekingfish/Twitch_Atis_CRC_Identifier)
 ![Version](https://img.shields.io/github/v/release/Hypekingfish/Twitch_Atis_CRC_Identifier)
 ![GitHub Stars](https://img.shields.io/github/stars/Hypekingfish/Twitch_Atis_CRC_Identifier)
 
