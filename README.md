@@ -1,5 +1,10 @@
 ![Python version](https://img.shields.io/badge/python-3.7%2B-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Build Status](https://img.shields.io/github/workflow/status/Hypekingfish/Twitch_Atis_CRC_Identifier/CI)
+![Code Coverage](https://img.shields.io/coveralls/github/Hypekingfish/Twitch_Atis_CRC_Identifier)
+![License](https://img.shields.io/badge/license-MIT-green)
+![Version](https://img.shields.io/github/release/Hypekingfish/Twitch_Atis_CRC_Identifier.svg)
+![GitHub Stars](https://img.shields.io/github/stars/Hypekingfish/Twitch_Atis_CRC_Identifier)
+
 
 
 # ATIS Twitch Bot
